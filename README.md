@@ -93,6 +93,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Project Link: [https://github.com/Martyj123/Hamiltonian_Variational_Integrators](https://github.com/Martyj123/Hamiltonian_Variational_Integrators)
 
+Linkedin: [https://linkedin.com/in/martynas-jurkonis-516807159](https://linkedin.com/in/martynas-jurkonis-516807159)
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
