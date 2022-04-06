@@ -1,0 +1,63 @@
+def h1(x, y, z, u):
+    a=z * u * np.sin(x - y)
+    b=l1 * l2 * (m1 + m2 * np.sin(x - y) ** 2)
+    return a / b
+
+def h2(x, y, z, u):
+    a=m2 * l1 * l2 * z * u * np.cos(x - y)
+    b=(m1 + m2) * l1**2 * u**2
+    c=m2 * (l2**2) * (z**2)
+    d=(2 * (l1**2) * (l2**2) * ((m1 + m2 * (np.sin(x - y)**2))**2))
+    return (c+b-a)/d
+
+def dhdq1(x, y, z, u):
+    a=(-m1 - m2) * g * l1 * np.sin(x)
+    b=h1(x, y, z, u)
+    c=h2(x, y, z, u) * np.sin(2 * (x - y))
+    return a-b+c
+
+def dhdp1(x, y, z, u):
+    a=l2 * z - l1 * u * np.cos(x - y)
+    b=(l1 ** 2) * l2 * (m1 + m2 * np.sin(x - y) ** 2)
+    return a/b
+
+def dhdq2(x, y, z, u):
+    a=-m2 * g * l2 * np.sin(y)
+    b=h1(x, y, z, u)
+    c=h2(x, y, z, u) * np.sin(2 * (x - y))
+    return a+b-c
+
+def dhdp2(x, y, z, u):
+    a=(-m2 * l2 * z * np.cos(x - y) + (m1 + m2) * l1 * u)
+    b=m2 * l1 * (l2 ** 2) * (m1 + m2 * (np.sin(x - y) ** 2))
+    return a/b
+
+while t < 5:
+    qn1 = 2 * dhdp1(q12, q22, p12, p22) * dt + q11
+    print("qn1 is ", qn1)
+    pn1 = p11 + 2 * dhdq1(q12, q22, p12, p22) * dt
+    print("pn1 is ", pn1)
+    qn2 = 2 * dhdp2(q12, q22, p12, p22) * dt + q21
+    print("qn2 is ", qn2)
+    pn2 = p21 + 2 * dhdq2(q12, q22, p12, p22) * dt
+    print("pn2 is ", pn2)
+    print(n)
+    n+=1
+    q11=q12
+    q12=qn1
+    p11=p12
+    p12=pn1
+    q21=q22
+    q22=qn2
+    p21=p22
+    p22=pn2
+    t+=dt;
+    tvals.append(t)
+    posx1= l1 * np.sin(qn1)
+    posy1= -l1 * np.cos(qn1)
+    posx2= posx1 + l2 * np.sin(qn2)
+    posy2= posy1 - l2 * np.cos(qn2)
+    posxvals1.append(posx1)
+    posyvals1.append(posy1)
+    posxvals2.append(posx2)
+    posyvals2.append(posy2)
