@@ -42,7 +42,7 @@ while t < 1000:
     qn1 = qnhalf + dhdp(pn1) * dt
     qn=qn1
     pn=pn1
-    t+=dt;
+    t+=dt
     tvals.append(t)
     posx=l * ma.sin(qn1)
     posy=l * ma.cos(qn1)
