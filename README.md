@@ -19,7 +19,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Marty's final year (2022), physics with astrophysics Mphys semester long project at University of Bath. Developing Hamiltonian variational integrators from first principles. Testing the integration schemes found in different Hamiltonian systems. With the goal of finding an explicit integration scheme which is applicable to non-separable Hamiltonian systems. Final submission attached in .pdf format.
+My final year (2022), physics with astrophysics Mphys semester long project at University of Bath. Developing Hamiltonian variational integrators from first principles. Testing the integration schemes found in different Hamiltonian systems. With the goal of finding an explicit integration scheme which is applicable to non-separable Hamiltonian systems. Final submission attached in .pdf format.
+The code for single pendulum and non-separable Hamiltonian tests is self contained and will reproduce the results shown in my final year paper, code for a double pendulum system is also included but I excluded it from the paper as the results showed varrying behaviour and it was not the point of the project to figure out if that was due to the chaotic nature of the system or due to a flaw in my implementation. Interesting topic to investigate in the future maybe...
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
